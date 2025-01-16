@@ -18,8 +18,11 @@ jobs:
         run: |
           sudo gem install cocoapods
           pod install
-      - name: xcodebuild
-        env:
-          scheme: ${{ 'default' }}
+      - name: xcodebuild pod
+        run: |
+          cd Pods
+          pod install
+          cd ..
+      - name: xcodebuild unshaky
         run: |
           xcodebuild CODE_SIGNING_ALLOWED=NO -arch x86_64
