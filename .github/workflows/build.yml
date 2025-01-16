@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v4
       - name: xcodebuild unshaky
         run: |
-          xcodebuild CODE_SIGNING_ALLOWED=NO -workspace Unshaky.xcworkspace -scheme Unshaky DONT_CODE_SIGN=YES -configuration Release
+          xcodebuild CODE_SIGNING_ALLOWED=NO -workspace Unshaky.xcworkspace -scheme Unshaky DONT_CODE_SIGN=YES -configuration Release -arch x86_64
